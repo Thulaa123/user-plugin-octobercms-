@@ -483,6 +483,11 @@ class Account extends ComponentBase
          */
         Event::fire('rainlab.user.update', [$user, $data]);
 
+        /*
+         * Update Event to hook into the plugins function
+         */
+        Event::fire('rainlab.user.update', [$user, $data]);
+
         Flash::success(post('flash', Lang::get(/*Settings successfully saved!*/'rainlab.user::lang.account.success_saved')));
 
         /*
